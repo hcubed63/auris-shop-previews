@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haynes Engine Works | Brandon, FL</title>
+  <style>
+    :root { --ink:#141414; --paper:#f4f1ea; --card:#fffdf8; --line:#d7d0c4; --accent:#c45c26; --accent-dark:#9a4318; --muted:#5c574e; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:Georgia,"Times New Roman",serif; background:var(--paper); color:var(--ink); line-height:1.5; }
+    header { background:var(--ink); color:var(--paper); padding:1.1rem 1.25rem; display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+    header a { background:var(--accent); color:#fff; text-decoration:none; font-family:system-ui,sans-serif; font-size:.9rem; font-weight:650; padding:.55rem .85rem; border-radius:4px; }
+    .hero { padding:3rem 1.25rem 2.25rem; max-width:720px; margin:0 auto; }
+    .eyebrow { font-family:system-ui,sans-serif; font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-dark); margin-bottom:.6rem; }
+    h1 { font-size:clamp(2rem,5vw,3rem); line-height:1.15; margin-bottom:.85rem; }
+    .sub { font-size:1.15rem; color:var(--muted); }
+    .actions { margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:.7rem; }
+    .btn { font-family:system-ui,sans-serif; text-decoration:none; padding:.8rem 1.1rem; border-radius:4px; font-weight:650; }
+    .btn-primary { background:var(--ink); color:#fff; }
+    .btn-ghost { border:1px solid var(--ink); color:var(--ink); }
+    section { max-width:720px; margin:0 auto; padding:0 1.25rem 2.5rem; }
+    h2 { font-size:1.45rem; margin-bottom:1rem; }
+    .services { display:grid; gap:.85rem; }
+    .services article { background:var(--card); border:1px solid var(--line); padding:1rem 1.1rem; }
+    .services p { font-family:system-ui,sans-serif; font-size:.95rem; color:var(--muted); }
+    .meta { font-family:system-ui,sans-serif; font-size:.95rem; background:var(--card); border:1px solid var(--line); padding:1rem 1.1rem; }
+    footer { border-top:1px solid var(--line); padding:1.25rem; text-align:center; font-family:system-ui,sans-serif; font-size:.85rem; color:var(--muted); }
+    .overlay { position:sticky; bottom:0; background:#1c140f; color:#f4f1ea; padding:.85rem 1.1rem; display:flex; justify-content:space-between; align-items:center; gap:1rem; font-family:system-ui,sans-serif; font-size:.9rem; }
+    .overlay a { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:.55rem .8rem; border-radius:4px; white-space:nowrap; }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Haynes Engine Works</strong>
+    <a href="tel:+18135025920">Call (813) 502-5920</a>
+  </header>
+  <div class="hero">
+    <p class="eyebrow">Brandon, Florida</p>
+    <h1>Engine machining and rebuilds in Brandon, done right.</h1>
+    <p class="sub">A full-service machine shop on Central Drive, run by Brian Haynes. From cylinder heads and block work to complete rebuilds built to your spec, diesel included.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="tel:+18135025920">Call (813) 502-5920</a>
+      <a class="btn btn-ghost" href="#hours">Hours &amp; address</a>
+    </div>
+  </div>
+  <section>
+    <h2>Services</h2>
+    <div class="services">
+      <article><h3>Complete engine rebuilds</h3><p>Engines rebuilt to your spec, from a single job to a complete build.</p></article>
+      <article><h3>Cylinder head work</h3><p>Cylinder head jobs done carefully and turned around on time.</p></article>
+      <article><h3>Block machining</h3><p>Decking, boring and lower-block machining, returned assembled if you ask.</p></article>
+      <article><h3>Diesel too</h3><p>Not limited to one or two engine types. Diesel work is welcome.</p></article>
+      <article><h3>Advice on your build</h3><p>Straight recommendations to help your project come out right.</p></article>
+    </div>
+  </section>
+  <section>
+    <h2>What neighbors say</h2>
+    <div class="services">
+      <article>
+        <p>“Brian is very knowledgeable, excellent machine work.”</p>
+        <p>— Shane, 2026</p>
+      </article>
+      <article>
+        <p>“This has been the most helpful and honest machine shop I’ve ever worked with.”</p>
+        <p>— Todd, 2026</p>
+      </article>
+      <article>
+        <p>“Gave me great service and outstanding recommendations on my project.”</p>
+        <p>— a customer, Google</p>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>About</h2>
+    <p>Haynes Engine Works is a full-service machine shop at 114 Central Dr. Brian and Cristy Haynes started the company in 2015. Customers bring in everything from a single cylinder head to a complete engine, and customers point to Brian’s knowledge, good communication and reasonable prices.</p>
+  </section>
+  <section id="hours">
+    <h2>Visit</h2>
+    <div class="meta">
+      <p><strong>114 Central Dr, Brandon, FL 33510</strong></p>
+      <p>Monday–Friday 8:00 am – 5:00 pm</p>
+      <p>Saturday–Sunday closed</p>
+      <p><a href="tel:+18135025920">(813) 502-5920</a> · <a href="mailto:haynesengineworks@gmail.com">haynesengineworks@gmail.com</a></p>
+    </div>
+  </section>
+  <footer>Preview built by <a href="https://aurisaiagency.com" style="color:inherit">Auris AI Agency</a></footer>
+  <div class="overlay">
+    <span>Preview site for Haynes. Claim it — $99 setup / $49 mo.</span>
+    <a href="mailto:hans@aurisaiagency.com?subject=Claim%20Haynes%20preview%20site">Claim this site</a>
+  </div>
+</body>
+</html>
