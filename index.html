@@ -60,6 +60,9 @@
     .overlay-inner { max-width:1120px; margin:0 auto; padding:.75rem 1rem; display:flex; justify-content:space-between; align-items:center; gap:.85rem; font-size:.9rem; }
     .overlay a { background:var(--red); color:#fff; text-decoration:none; font-weight:700; padding:.6rem .9rem; border-radius:6px; white-space:nowrap; }
     .overlay a:hover, .overlay a:focus-visible { background:var(--red-dark); }
+    .overlay-cta { display:flex; flex-direction:column; align-items:flex-end; gap:.35rem; flex-shrink:0; }
+    .overlay a.yearly { background:none; padding:0; border-radius:0; font-weight:500; font-size:.78rem; color:#cfcfcb; text-decoration:underline; text-underline-offset:2px; }
+    .overlay a.yearly:hover, .overlay a.yearly:focus-visible { background:none; color:#fff; }
     a:focus-visible { outline:3px solid #ffd166; outline-offset:2px; }
     @media (max-width:480px) {
       .brand { font-size:.95rem; }
@@ -151,7 +154,10 @@
   <div class="overlay">
     <div class="overlay-inner">
       <span>Preview site for Weaver's. Claim it — $99 setup / $49 mo.</span>
-      <a href="https://buy.stripe.com/8x2aEYc7n6501pi5uz7N60h">Claim this site</a>
+      <div class="overlay-cta">
+        <a class="claim" href="https://buy.stripe.com/8x2aEYc7n6501pi5uz7N60h">Claim this site</a>
+        <a class="yearly" href="https://buy.stripe.com/dRmaEYefv8d82tm9KP7N60i">Pay the year — $411 hosting (30% off)</a>
+      </div>
     </div>
   </div>
 </body>
