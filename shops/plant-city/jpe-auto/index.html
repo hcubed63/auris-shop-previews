@@ -83,43 +83,56 @@
       .split { grid-template-columns:1.3fr 1fr; gap:1.25rem; }
     }
     .hero { background-image:linear-gradient(180deg, rgba(10,11,13,.40) 0%, rgba(10,11,13,.62) 45%, rgba(10,11,13,.95) 100%), url("https://images.unsplash.com/photo-1599082267768-4815b2ea6bd2?w=1800&h=1100&q=70&auto=format&fit=crop"); background-position:center center; }
+    .top-actions { display:flex; align-items:center; gap:.7rem; flex-shrink:0; }
+    .lang { display:flex; align-items:center; gap:.3rem; font-size:.8rem; color:var(--muted); white-space:nowrap; }
+    .lang button { background:none; border:0; padding:.2rem .1rem; font:inherit; color:var(--muted); cursor:pointer; }
+    .lang button:hover { color:#fff; }
+    .lang button[aria-pressed="true"] { color:#fff; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+    .lang button:focus-visible { outline:3px solid #ffd166; outline-offset:2px; }
+    @media (max-width:480px) {
+      .top-actions { flex-direction:column; align-items:flex-end; gap:.2rem; }
+      .lang { font-size:.74rem; }
+    }
   </style>
 </head>
 <body>
   <header class="top">
     <div class="top-inner">
       <a class="brand" href="#top">JPE Auto Repairs &amp; Tire Service</a>
-      <a class="btn btn-red btn-sm" href="tel:+18136528282"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call (813) 652-8282</a>
+      <div class="top-actions">
+        <div class="lang" role="group" aria-label="Language / Idioma"><button type="button" data-lang="en" aria-pressed="true">English</button><span aria-hidden="true">|</span><button type="button" data-lang="es" lang="es" aria-pressed="false">Español</button></div>
+        <a class="btn btn-red btn-sm" href="tel:+18136528282"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span data-es="Llamar (813) 652-8282">Call (813) 652-8282</span></a>
+      </div>
     </div>
   </header>
   <section class="hero" id="top" aria-label="JPE Auto Repairs &amp; Tire Service">
     <div class="hero-inner">
       <p class="eyebrow">Plant City, FL</p>
       <h1>JPE Auto Repairs &amp; Tire Service</h1>
-      <p class="headline">Auto repair and tire service in Plant City, open Sundays.</p>
-      <p class="sub">Luis’s shop on East Baker Street handles A/C, tune-ups, brakes, alignments and tires. Open Sunday through Friday. Se habla español.</p>
+      <p class="headline" data-es="Reparación de autos y servicio de llantas en Plant City, abierto los domingos.">Auto repair and tire service in Plant City, open Sundays.</p>
+      <p class="sub" data-es="El taller de Luis en East Baker Street se encarga de aire acondicionado, afinaciones, frenos, alineaciones y llantas. Abierto de domingo a viernes. Se habla español.">Luis’s shop on East Baker Street handles A/C, tune-ups, brakes, alignments and tires. Open Sunday through Friday. Se habla español.</p>
       <div class="actions">
-        <a class="btn btn-red btn-lg" href="tel:+18136528282"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call (813) 652-8282</a>
-        <a class="btn btn-outline btn-lg" href="#hours">Hours &amp; address</a>
+        <a class="btn btn-red btn-lg" href="tel:+18136528282"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span data-es="Llamar (813) 652-8282">Call (813) 652-8282</span></a>
+        <a class="btn btn-outline btn-lg" href="#hours" data-es="Horario y dirección">Hours &amp; address</a>
       </div>
     </div>
   </section>
   <main>
     <section id="services">
-      <p class="kicker">What we do</p>
-      <h2>Services</h2>
+      <p class="kicker" data-es="Lo que hacemos">What we do</p>
+      <h2 data-es="Servicios">Services</h2>
       <div class="grid svcs">
-        <article class="card svc"><span class="num">01</span><h3>A/C service</h3><p>A/C service and repair to keep you cool through Florida summers.</p></article>
-        <article class="card svc"><span class="num">02</span><h3>Tune-ups &amp; oil changes</h3><p>Tune-ups and oil changes to keep your car running right.</p></article>
-        <article class="card svc"><span class="num">03</span><h3>Brake service</h3><p>Brake inspections and repairs so you stop safely.</p></article>
-        <article class="card svc"><span class="num">04</span><h3>Wheel alignment &amp; suspension</h3><p>Alignment, steering and suspension work for a smooth, straight ride.</p></article>
-        <article class="card svc"><span class="num">05</span><h3>Tire service</h3><p>Tire service to get you back on the road.</p></article>
-        <article class="card svc"><span class="num">06</span><h3>Engine work</h3><p>Engine repairs, up to full rebuilds.</p></article>
+        <article class="card svc"><span class="num">01</span><h3 data-es="Servicio de aire acondicionado">A/C service</h3><p data-es="Servicio y reparación de aire acondicionado para mantenerse fresco durante los veranos de Florida.">A/C service and repair to keep you cool through Florida summers.</p></article>
+        <article class="card svc"><span class="num">02</span><h3 data-es="Afinaciones y cambios de aceite">Tune-ups &amp; oil changes</h3><p data-es="Afinaciones y cambios de aceite para que su auto funcione bien.">Tune-ups and oil changes to keep your car running right.</p></article>
+        <article class="card svc"><span class="num">03</span><h3 data-es="Servicio de frenos">Brake service</h3><p data-es="Inspección y reparación de frenos para que frene con seguridad.">Brake inspections and repairs so you stop safely.</p></article>
+        <article class="card svc"><span class="num">04</span><h3 data-es="Alineación y suspensión">Wheel alignment &amp; suspension</h3><p data-es="Alineación, dirección y suspensión para un manejo suave y derecho.">Alignment, steering and suspension work for a smooth, straight ride.</p></article>
+        <article class="card svc"><span class="num">05</span><h3 data-es="Servicio de llantas">Tire service</h3><p data-es="Servicio de llantas para que vuelva al camino.">Tire service to get you back on the road.</p></article>
+        <article class="card svc"><span class="num">06</span><h3 data-es="Trabajos de motor">Engine work</h3><p data-es="Reparaciones de motor, hasta reconstrucciones completas.">Engine repairs, up to full rebuilds.</p></article>
       </div>
     </section>
     <section id="reviews">
-      <p class="kicker">Reviews</p>
-      <h2>What neighbors say</h2>
+      <p class="kicker" data-es="Reseñas">Reviews</p>
+      <h2 data-es="Lo que dicen los vecinos">What neighbors say</h2>
       <div class="grid revs">
         <figure class="card rev"><blockquote>“I've been taking my vehicles with Luis for years. They are great people. Honest and professional every time.”</blockquote><figcaption>— Marco, Jun 2026</figcaption></figure>
         <figure class="card rev"><blockquote>“They do a great job in all my cars the office is very clean and more they r very nice people”</blockquote><figcaption>— Lakangri, Jul 2026</figcaption></figure>
@@ -129,22 +142,22 @@
     <section id="about-visit">
       <div class="split">
         <div class="card about">
-          <p class="kicker">Who we are</p>
-          <h2>About</h2>
-          <p>JPE Auto Repairs Inc. &amp; Tire Service is run by Luis at 1302 E Baker St, and the company has been incorporated since 2019. We’re open Sunday through Friday, and se habla español. Customers point to honest, professional work and a clean office.</p>
+          <p class="kicker" data-es="Quiénes somos">Who we are</p>
+          <h2 data-es="Sobre nosotros">About</h2>
+          <p data-es="JPE Auto Repairs Inc. &amp; Tire Service está a cargo de Luis, en 1302 E Baker St, y la compañía está constituida desde 2019. Abrimos de domingo a viernes, y se habla español. Los clientes destacan el trabajo honesto y profesional, y una oficina limpia.">JPE Auto Repairs Inc. &amp; Tire Service is run by Luis at 1302 E Baker St, and the company has been incorporated since 2019. We’re open Sunday through Friday, and se habla español. Customers point to honest, professional work and a clean office.</p>
         </div>
         <div class="card visit" id="hours">
-          <p class="kicker">Hours &amp; address</p>
-          <h2>Visit</h2>
+          <p class="kicker" data-es="Horario y dirección">Hours &amp; address</p>
+          <h2 data-es="Visítenos">Visit</h2>
           <dl>
-          <div><dt>Address</dt><dd><strong>1302 E Baker St, Plant City, FL 33563</strong></dd></div>
-          <div><dt>Hours</dt><dd>Open Sunday–Friday · Saturday closed<br>Please call ahead for current hours.</dd></div>
-          <div><dt>Phone</dt><dd><a href="tel:+18136528282">Office (813) 652-8282</a> · <a href="tel:+18133166874">Cell (813) 316-6874</a></dd></div>
-          <div><dt>Email</dt><dd><a href="mailto:Jpeautosrepairs@gmail.com">Jpeautosrepairs@gmail.com</a></dd></div>
+          <div><dt data-es="Dirección">Address</dt><dd><strong>1302 E Baker St, Plant City, FL 33563</strong></dd></div>
+          <div><dt data-es="Horario">Hours</dt><dd><span data-es="Abierto de domingo a viernes · Sábado cerrado">Open Sunday–Friday · Saturday closed</span><br><span data-es="Por favor, llame antes para confirmar el horario actual.">Please call ahead for current hours.</span></dd></div>
+          <div><dt data-es="Teléfono">Phone</dt><dd><a href="tel:+18136528282" data-es="Oficina (813) 652-8282">Office (813) 652-8282</a> · <a href="tel:+18133166874" data-es="Celular (813) 316-6874">Cell (813) 316-6874</a></dd></div>
+          <div><dt data-es="Correo electrónico">Email</dt><dd><a href="mailto:Jpeautosrepairs@gmail.com">Jpeautosrepairs@gmail.com</a></dd></div>
           </dl>
           <div class="actions">
-            <a class="btn btn-red btn-lg" href="tel:+18136528282"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call (813) 652-8282</a>
-            <a class="btn btn-outline btn-lg" href="https://www.google.com/maps/search/?api=1&amp;query=1302%20E%20Baker%20St%2C%20Plant%20City%2C%20FL%2033563" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-red btn-lg" href="tel:+18136528282"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span data-es="Llamar (813) 652-8282">Call (813) 652-8282</span></a>
+            <a class="btn btn-outline btn-lg" href="https://www.google.com/maps/search/?api=1&amp;query=1302%20E%20Baker%20St%2C%20Plant%20City%2C%20FL%2033563" target="_blank" rel="noopener" data-es="Cómo llegar">Get directions</a>
           </div>
         </div>
       </div>
@@ -163,5 +176,33 @@
       </div>
     </div>
   </div>
+  <script>
+  (function () {
+    var KEY = 'auris-lang';
+    var els = Array.prototype.slice.call(document.querySelectorAll('[data-es]'));
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.lang button'));
+    els.forEach(function (el) { el.setAttribute('data-en', el.textContent); });
+    function setLang(lang) {
+      els.forEach(function (el) { el.textContent = el.getAttribute(lang === 'es' ? 'data-es' : 'data-en'); });
+      document.documentElement.lang = lang;
+      btns.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false'); });
+    }
+    var q = null, saved = null;
+    try { q = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    setLang(q === 'es' || q === 'en' ? q : (saved === 'es' ? 'es' : 'en'));
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var lang = b.getAttribute('data-lang');
+        setLang(lang);
+        try { localStorage.setItem(KEY, lang); } catch (e) {}
+        try {
+          var u = new URL(location.href);
+          if (u.searchParams.has('lang')) { u.searchParams.set('lang', lang); history.replaceState(null, '', u.toString()); }
+        } catch (e) {}
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

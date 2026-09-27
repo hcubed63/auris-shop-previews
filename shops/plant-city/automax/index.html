@@ -83,42 +83,55 @@
       .split { grid-template-columns:1.3fr 1fr; gap:1.25rem; }
     }
     .hero { background-image:linear-gradient(180deg, rgba(10,11,13,.40) 0%, rgba(10,11,13,.62) 45%, rgba(10,11,13,.95) 100%), url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1800&q=70&auto=format&fit=crop"); background-position:center center; }
+    .top-actions { display:flex; align-items:center; gap:.7rem; flex-shrink:0; }
+    .lang { display:flex; align-items:center; gap:.3rem; font-size:.8rem; color:var(--muted); white-space:nowrap; }
+    .lang button { background:none; border:0; padding:.2rem .1rem; font:inherit; color:var(--muted); cursor:pointer; }
+    .lang button:hover { color:#fff; }
+    .lang button[aria-pressed="true"] { color:#fff; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+    .lang button:focus-visible { outline:3px solid #ffd166; outline-offset:2px; }
+    @media (max-width:480px) {
+      .top-actions { flex-direction:column; align-items:flex-end; gap:.2rem; }
+      .lang { font-size:.74rem; }
+    }
   </style>
 </head>
 <body>
   <header class="top">
     <div class="top-inner">
       <a class="brand" href="#top">Automax Services</a>
-      <a class="btn btn-red btn-sm" href="tel:+18134414477"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call (813) 441-4477</a>
+      <div class="top-actions">
+        <div class="lang" role="group" aria-label="Language / Idioma"><button type="button" data-lang="en" aria-pressed="true">English</button><span aria-hidden="true">|</span><button type="button" data-lang="es" lang="es" aria-pressed="false">Español</button></div>
+        <a class="btn btn-red btn-sm" href="tel:+18134414477"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span data-es="Llamar (813) 441-4477">Call (813) 441-4477</span></a>
+      </div>
     </div>
   </header>
   <section class="hero" id="top" aria-label="Automax Services">
     <div class="hero-inner">
       <p class="eyebrow">Plant City, FL</p>
       <h1>Automax Services</h1>
-      <p class="headline">Family auto repair on North Collins Street. Se habla español.</p>
-      <p class="sub">Tune-ups, oil changes, A/C, engine work, brakes and tires in Plant City, with clear communication.</p>
+      <p class="headline" data-es="Taller mecánico familiar en North Collins Street. Se habla español.">Family auto repair on North Collins Street. Se habla español.</p>
+      <p class="sub" data-es="Afinaciones, cambios de aceite, aire acondicionado, trabajos de motor, frenos y llantas en Plant City, con una comunicación clara.">Tune-ups, oil changes, A/C, engine work, brakes and tires in Plant City, with clear communication.</p>
       <div class="actions">
-        <a class="btn btn-red btn-lg" href="tel:+18134414477"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call (813) 441-4477</a>
-        <a class="btn btn-outline btn-lg" href="#hours">Hours &amp; address</a>
+        <a class="btn btn-red btn-lg" href="tel:+18134414477"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span data-es="Llamar (813) 441-4477">Call (813) 441-4477</span></a>
+        <a class="btn btn-outline btn-lg" href="#hours" data-es="Horario y dirección">Hours &amp; address</a>
       </div>
     </div>
   </section>
   <main>
     <section id="services">
-      <p class="kicker">What we do</p>
-      <h2>Services</h2>
+      <p class="kicker" data-es="Lo que hacemos">What we do</p>
+      <h2 data-es="Servicios">Services</h2>
       <div class="grid svcs">
-        <article class="card svc"><span class="num">01</span><h3>Tune-ups &amp; oil changes</h3><p>Tune-ups and oil changes to keep your car running right.</p></article>
-        <article class="card svc"><span class="num">02</span><h3>A/C repair</h3><p>A/C repair, including newer R-1234yf systems.</p></article>
-        <article class="card svc"><span class="num">03</span><h3>Engine repair</h3><p>Engine diagnosis and repair, with the diagnosis explained clearly.</p></article>
-        <article class="card svc"><span class="num">04</span><h3>Tires &amp; tire repair</h3><p>Tire repairs and replacement tires, changed quickly.</p></article>
-        <article class="card svc"><span class="num">05</span><h3>Brakes &amp; alternators</h3><p>Brake repair and alternator replacement.</p></article>
+        <article class="card svc"><span class="num">01</span><h3 data-es="Afinaciones y cambios de aceite">Tune-ups &amp; oil changes</h3><p data-es="Afinaciones y cambios de aceite para que su auto funcione bien.">Tune-ups and oil changes to keep your car running right.</p></article>
+        <article class="card svc"><span class="num">02</span><h3 data-es="Reparación de aire acondicionado">A/C repair</h3><p data-es="Reparación de aire acondicionado, incluidos los sistemas más nuevos R-1234yf.">A/C repair, including newer R-1234yf systems.</p></article>
+        <article class="card svc"><span class="num">03</span><h3 data-es="Reparación de motor">Engine repair</h3><p data-es="Diagnóstico y reparación de motor, con el diagnóstico explicado claramente.">Engine diagnosis and repair, with the diagnosis explained clearly.</p></article>
+        <article class="card svc"><span class="num">04</span><h3 data-es="Llantas y reparación de llantas">Tires &amp; tire repair</h3><p data-es="Reparación de llantas y llantas de reemplazo, cambiadas rápidamente.">Tire repairs and replacement tires, changed quickly.</p></article>
+        <article class="card svc"><span class="num">05</span><h3 data-es="Frenos y alternadores">Brakes &amp; alternators</h3><p data-es="Reparación de frenos y reemplazo de alternadores.">Brake repair and alternator replacement.</p></article>
       </div>
     </section>
     <section id="reviews">
-      <p class="kicker">Reviews</p>
-      <h2>What neighbors say</h2>
+      <p class="kicker" data-es="Reseñas">Reviews</p>
+      <h2 data-es="Lo que dicen los vecinos">What neighbors say</h2>
       <div class="grid revs">
         <figure class="card rev"><blockquote>“Awesome service and very family oriented business.”</blockquote><figcaption>— Otto, Jul 2026</figcaption></figure>
         <figure class="card rev"><blockquote>“Came in last minute and needed a new tire, not only did they have one readily available but they were fairly priced and changed my tire in record timing.”</blockquote><figcaption>— Christine, May 2026</figcaption></figure>
@@ -128,21 +141,21 @@
     <section id="about-visit">
       <div class="split">
         <div class="card about">
-          <p class="kicker">Who we are</p>
-          <h2>About</h2>
-          <p>Automax Services is a family-oriented shop at 310 N Collins St, Ste A, run by owner Maria. Se habla español. Customers point to clear communication, fair prices and fast work.</p>
+          <p class="kicker" data-es="Quiénes somos">Who we are</p>
+          <h2 data-es="Sobre nosotros">About</h2>
+          <p data-es="Automax Services es un taller familiar en 310 N Collins St, Ste A, a cargo de su dueña, Maria. Se habla español. Los clientes destacan la comunicación clara, los precios justos y el trabajo rápido.">Automax Services is a family-oriented shop at 310 N Collins St, Ste A, run by owner Maria. Se habla español. Customers point to clear communication, fair prices and fast work.</p>
         </div>
         <div class="card visit" id="hours">
-          <p class="kicker">Hours &amp; address</p>
-          <h2>Visit</h2>
+          <p class="kicker" data-es="Horario y dirección">Hours &amp; address</p>
+          <h2 data-es="Visítenos">Visit</h2>
           <dl>
-          <div><dt>Address</dt><dd><strong>310 N Collins St, Ste A, Plant City, FL 33563</strong></dd></div>
-          <div><dt>Hours</dt><dd>Please call ahead for current hours.</dd></div>
-          <div><dt>Phone</dt><dd><a href="tel:+18134414477">(813) 441-4477</a></dd></div>
+          <div><dt data-es="Dirección">Address</dt><dd><strong>310 N Collins St, Ste A, Plant City, FL 33563</strong></dd></div>
+          <div><dt data-es="Horario">Hours</dt><dd><span data-es="Por favor, llame antes para confirmar el horario actual.">Please call ahead for current hours.</span></dd></div>
+          <div><dt data-es="Teléfono">Phone</dt><dd><a href="tel:+18134414477">(813) 441-4477</a></dd></div>
           </dl>
           <div class="actions">
-            <a class="btn btn-red btn-lg" href="tel:+18134414477"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call (813) 441-4477</a>
-            <a class="btn btn-outline btn-lg" href="https://www.google.com/maps/search/?api=1&amp;query=310%20N%20Collins%20St%2C%20Ste%20A%2C%20Plant%20City%2C%20FL%2033563" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-red btn-lg" href="tel:+18134414477"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span data-es="Llamar (813) 441-4477">Call (813) 441-4477</span></a>
+            <a class="btn btn-outline btn-lg" href="https://www.google.com/maps/search/?api=1&amp;query=310%20N%20Collins%20St%2C%20Ste%20A%2C%20Plant%20City%2C%20FL%2033563" target="_blank" rel="noopener" data-es="Cómo llegar">Get directions</a>
           </div>
         </div>
       </div>
@@ -161,5 +174,33 @@
       </div>
     </div>
   </div>
+  <script>
+  (function () {
+    var KEY = 'auris-lang';
+    var els = Array.prototype.slice.call(document.querySelectorAll('[data-es]'));
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.lang button'));
+    els.forEach(function (el) { el.setAttribute('data-en', el.textContent); });
+    function setLang(lang) {
+      els.forEach(function (el) { el.textContent = el.getAttribute(lang === 'es' ? 'data-es' : 'data-en'); });
+      document.documentElement.lang = lang;
+      btns.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false'); });
+    }
+    var q = null, saved = null;
+    try { q = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    setLang(q === 'es' || q === 'en' ? q : (saved === 'es' ? 'es' : 'en'));
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var lang = b.getAttribute('data-lang');
+        setLang(lang);
+        try { localStorage.setItem(KEY, lang); } catch (e) {}
+        try {
+          var u = new URL(location.href);
+          if (u.searchParams.has('lang')) { u.searchParams.set('lang', lang); history.replaceState(null, '', u.toString()); }
+        } catch (e) {}
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
