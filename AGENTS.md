@@ -6,7 +6,7 @@ Live site: [https://auris-shop-previews.pages.dev](https://auris-shop-previews.p
 
 ## Status
 
-19 shops are live: 6 in Brandon, 8 in Plant City, 3 in Riverview, 1 in Valrico, 1 in Seffner. **Nobody has been contacted.**
+27 shops are live: 6 in Brandon, 8 in Plant City, 3 in Riverview, 1 in Valrico, 1 in Seffner, 1 in Ruskin, 3 in Gibsonton, 4 in Lakeland. **Nobody has been contacted.**
 
 Monday call order:
 
@@ -44,6 +44,9 @@ shops/plant-city/   8 pages
 shops/riverview/    3 pages
 shops/valrico/      1 page
 shops/seffner/      1 page
+shops/ruskin/       1 page
+shops/gibsonton/    3 pages
+shops/lakeland/     4 pages
 ```
 
 Each shop folder is `shops/{city}/{slug}/index.html`. Public URL: `https://auris-shop-previews.pages.dev/shops/{city}/{slug}/`.
@@ -91,6 +94,29 @@ Each shop folder is `shops/{city}/{slug}/index.html`. Public URL: `https://auris
 | Slug | Shop | Phone |
 | --- | --- | --- |
 | `brandon-auto-tech` | Brandon Auto Tech (named Brandon, located in Seffner) | (813) 689-5950 |
+
+### Ruskin
+
+| Slug | Shop | Phone |
+| --- | --- | --- |
+| `millenium-tire` | Millenium Tire Service | (813) 641-8446 |
+
+### Gibsonton
+
+| Slug | Shop | Phone |
+| --- | --- | --- |
+| `new-vision-auto-cares` | New Vision Auto Cares | (917) 807-2785 |
+| `cruzcitos-tire-shop` | Cruzcitos Tire Shop | (813) 454-9413 |
+| `south-bay-tire` | South Bay Tire | (813) 236-4131 |
+
+### Lakeland
+
+| Slug | Shop | Phone |
+| --- | --- | --- |
+| `second-chance-tires` | Second Chance Tires & Wheels | (863) 698-7945 |
+| `webbs-service-center` | Webb's Service Center | (863) 686-5498 |
+| `wesco-tire` | Wesco Tire Service | (863) 682-4319 |
+| `grants-auto` | Grant's Auto | (863) 666-1282 |
 
 Addresses, hours, and source notes live in `shops.csv`. Prefer that file over memory when they disagree with a page.
 
