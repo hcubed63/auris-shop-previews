@@ -6,7 +6,7 @@ Live site: [https://auris-shop-previews.pages.dev](https://auris-shop-previews.p
 
 ## Status
 
-14 shops are live: 6 in Brandon, 8 in Plant City. **Nobody has been contacted.**
+19 shops are live: 6 in Brandon, 8 in Plant City, 3 in Riverview, 1 in Valrico, 1 in Seffner. **Nobody has been contacted.**
 
 Monday call order:
 
@@ -41,6 +41,9 @@ index.html          Root is Weaver's Tire & Automotive (same preview as the shop
 shops.csv           Shop list: slug, contact, hours, site status, review sources
 shops/brandon/      6 pages
 shops/plant-city/   8 pages
+shops/riverview/    3 pages
+shops/valrico/      1 page
+shops/seffner/      1 page
 ```
 
 Each shop folder is `shops/{city}/{slug}/index.html`. Public URL: `https://auris-shop-previews.pages.dev/shops/{city}/{slug}/`.
@@ -68,6 +71,26 @@ Each shop folder is `shops/{city}/{slug}/index.html`. Public URL: `https://auris
 | `automax` | Automax Services | (813) 441-4477 |
 | `92-tires` | 92 Tires | (813) 752-4600 |
 | `hometown-tire` | Hometown Tire & Auto Repair | (813) 652-8093 |
+
+### Riverview
+
+| Slug | Shop | Phone |
+| --- | --- | --- |
+| `boyds` | Boyd's Auto Center | (813) 677-1865 |
+| `sonnys-tire` | Sonny's Tire & Automotive | (813) 626-4556 |
+| `caribbean-auto` | Caribbean Auto Service & Tire Shop | (813) 647-6409 |
+
+### Valrico
+
+| Slug | Shop | Phone |
+| --- | --- | --- |
+| `dk-european` | DK European Services & Repairs | (813) 802-1695 |
+
+### Seffner
+
+| Slug | Shop | Phone |
+| --- | --- | --- |
+| `brandon-auto-tech` | Brandon Auto Tech (named Brandon, located in Seffner) | (813) 689-5950 |
 
 Addresses, hours, and source notes live in `shops.csv`. Prefer that file over memory when they disagree with a page.
 

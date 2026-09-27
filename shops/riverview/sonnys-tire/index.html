@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sonny's Tire &amp; Automotive | Riverview, FL</title>
+  <meta name="description" content="Jason and his team handle tires, tune-ups, A/C service, alignments, shocks and struts in Riverview." />
+  <meta name="theme-color" content="#0e0f11" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Oswald:wght@600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1599082267768-4815b2ea6bd2?w=1800&amp;h=1100&amp;q=70&amp;auto=format&amp;fit=crop" />
+  <style>
+    :root { --bg:#0e0f11; --bg2:#131518; --card:#17191c; --line:#2a2d33; --text:#f2f2f0; --muted:#b4b8bf; --red:#d62828; --red-dark:#a61e1e; --red-text:#ff5a5a; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; }
+    h1, h2, h3, .brand { font-family:Oswald,Impact,"Arial Narrow",system-ui,sans-serif; font-weight:700; letter-spacing:.01em; }
+    .top { position:sticky; top:0; z-index:20; background:rgba(14,15,17,.96); border-bottom:1px solid var(--line); }
+    .top-inner { max-width:1120px; margin:0 auto; padding:.7rem 1rem; display:flex; justify-content:space-between; align-items:center; gap:.75rem; }
+    .brand { font-size:1.05rem; text-transform:uppercase; line-height:1.2; text-decoration:none; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:.45rem; text-decoration:none; font-weight:700; border-radius:6px; line-height:1.2; transition:background .15s, border-color .15s, color .15s; }
+    .btn-red { background:var(--red); color:#fff; border:2px solid var(--red); }
+    .btn-red:hover, .btn-red:focus-visible { background:var(--red-dark); border-color:var(--red-dark); }
+    .btn-outline { border:2px solid rgba(255,255,255,.85); color:#fff; background:rgba(0,0,0,.2); }
+    .btn-outline:hover, .btn-outline:focus-visible { background:#fff; color:#111; }
+    .btn-sm { font-size:.85rem; padding:.55rem .8rem; white-space:nowrap; }
+    .btn-lg { font-size:1rem; padding:.9rem 1.3rem; }
+    .btn svg { width:1em; height:1em; flex:none; }
+    .hero { position:relative; min-height:70vh; display:flex; align-items:flex-end; background-color:#1b1d21; background-size:cover; background-repeat:no-repeat; }
+    .hero-inner { width:100%; max-width:1120px; margin:0 auto; padding:5rem 1.1rem 3.25rem; }
+    .eyebrow { font-size:.8rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#ff6b6b; margin-bottom:.75rem; font-variant:small-caps; }
+    .hero h1 { font-size:clamp(2.6rem, 9vw, 5rem); line-height:1.02; text-transform:uppercase; margin-bottom:1rem; max-width:16ch; text-shadow:0 2px 18px rgba(0,0,0,.45); }
+    .headline { font-size:clamp(1.15rem, 2.6vw, 1.5rem); font-weight:650; line-height:1.35; max-width:40ch; margin-bottom:.6rem; }
+    .sub { font-size:1.02rem; color:#dfe1e4; max-width:60ch; }
+    .actions { margin-top:1.6rem; display:flex; flex-wrap:wrap; gap:.75rem; }
+    main section { max-width:1120px; margin:0 auto; padding:3.5rem 1.1rem 0; }
+    .kicker { font-size:.75rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--red-text); margin-bottom:.35rem; }
+    h2 { font-size:clamp(1.8rem, 4.5vw, 2.5rem); text-transform:uppercase; line-height:1.1; margin-bottom:1.4rem; }
+    .grid { display:grid; gap:1rem; grid-template-columns:1fr; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:1.25rem 1.2rem 1.3rem; position:relative; overflow:hidden; }
+    .svc { border-top:3px solid var(--red); }
+    .svc h3 { font-size:1.2rem; text-transform:uppercase; margin-bottom:.4rem; line-height:1.25; }
+    .svc p { color:var(--muted); font-size:.97rem; }
+    .num { display:block; font-family:Oswald,system-ui,sans-serif; color:var(--red-text); font-weight:700; font-size:.85rem; letter-spacing:.12em; margin-bottom:.5rem; }
+    .rev blockquote { font-size:1.08rem; line-height:1.5; margin-bottom:1rem; }
+    .rev blockquote::before { content:""; display:block; width:2.25rem; height:3px; background:var(--red); border-radius:2px; margin-bottom:.95rem; }
+    .rev figcaption { color:var(--muted); font-size:.92rem; font-weight:600; }
+    .split { display:grid; gap:1rem; grid-template-columns:1fr; }
+    .about p:not(.kicker) { color:#d9dbdf; font-size:1.05rem; }
+    .visit dl { display:grid; gap:1rem; }
+    .visit dt { font-size:.72rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--red-text); margin-bottom:.15rem; }
+    .visit dd { font-size:1rem; }
+    .visit dd a { text-decoration-color:rgba(255,255,255,.35); text-underline-offset:3px; }
+    .visit .actions { margin-top:1.25rem; }
+    footer { max-width:1120px; margin:3.5rem auto 0; padding:1.5rem 1.1rem 2rem; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; display:flex; flex-wrap:wrap; justify-content:space-between; gap:.5rem; }
+    footer a { color:#fff; }
+    .overlay { position:sticky; bottom:0; z-index:30; background:#050506; border-top:2px solid var(--red); color:#f2f2f0; }
+    .overlay-inner { max-width:1120px; margin:0 auto; padding:.75rem 1rem; display:flex; justify-content:space-between; align-items:center; gap:.85rem; font-size:.9rem; }
+    .overlay a { background:var(--red); color:#fff; text-decoration:none; font-weight:700; padding:.6rem .9rem; border-radius:6px; white-space:nowrap; }
+    .overlay a:hover, .overlay a:focus-visible { background:var(--red-dark); }
+    .overlay-cta { display:flex; flex-direction:column; align-items:flex-end; gap:.35rem; flex-shrink:0; }
+    .overlay a.yearly { background:none; padding:0; border-radius:0; font-weight:500; font-size:.78rem; color:#cfcfcb; text-decoration:underline; text-underline-offset:2px; }
+    .overlay a.yearly:hover, .overlay a.yearly:focus-visible { background:none; color:#fff; }
+    a:focus-visible { outline:3px solid #ffd166; outline-offset:2px; }
+    @media (max-width:480px) {
+      .brand { font-size:.95rem; }
+      .btn-sm { font-size:.8rem; padding:.5rem .65rem; }
+      .actions .btn-lg { flex:1 1 100%; }
+      .overlay-inner { font-size:.84rem; }
+    }
+    @media (min-width:700px) {
+      .top-inner { padding:.8rem 1.25rem; }
+      .brand { font-size:1.25rem; }
+      .grid.svcs { grid-template-columns:repeat(2, 1fr); }
+      .grid.revs { grid-template-columns:repeat(3, 1fr); }
+      .hero-inner { padding:6rem 1.25rem 4.5rem; }
+    }
+    @media (min-width:1000px) {
+      .grid.svcs { grid-template-columns:repeat(3, 1fr); }
+      .grid.svcs.even4 { grid-template-columns:repeat(4, 1fr); }
+      .split { grid-template-columns:1.3fr 1fr; gap:1.25rem; }
+    }
+    .hero { background-image:linear-gradient(180deg, rgba(10,11,13,.40) 0%, rgba(10,11,13,.62) 45%, rgba(10,11,13,.95) 100%), url("https://images.unsplash.com/photo-1599082267768-4815b2ea6bd2?w=1800&h=1100&q=70&auto=format&fit=crop"); background-position:center center; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand" href="#top">Sonny's Tire &amp; Automotive</a>
+      <a class="btn btn-red btn-sm" href="tel:+18136264556"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call (813) 626-4556</a>
+    </div>
+  </header>
+  <section class="hero" id="top" aria-label="Sonny&#x27;s Tire &amp; Automotive">
+    <div class="hero-inner">
+      <p class="eyebrow">Riverview, FL</p>
+      <h1>Sonny's Tire &amp; Automotive</h1>
+      <p class="headline">Tires, oil changes, A/C and alignments on Gornto Lake Road.</p>
+      <p class="sub">Jason and his team handle tires, tune-ups, A/C service, alignments, shocks and struts in Riverview.</p>
+      <div class="actions">
+        <a class="btn btn-red btn-lg" href="tel:+18136264556"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call (813) 626-4556</a>
+        <a class="btn btn-outline btn-lg" href="#hours">Hours &amp; address</a>
+      </div>
+    </div>
+  </section>
+  <main>
+    <section id="services">
+      <p class="kicker">What we do</p>
+      <h2>Services</h2>
+      <div class="grid svcs">
+        <article class="card svc"><span class="num">01</span><h3>Tire balancing &amp; rotation</h3><p>Tire balancing and rotation to help your tires wear evenly and ride smooth.</p></article>
+        <article class="card svc"><span class="num">02</span><h3>Oil changes</h3><p>Oil changes to keep your engine running right.</p></article>
+        <article class="card svc"><span class="num">03</span><h3>Tune-ups</h3><p>Tune-ups to keep your car running smooth.</p></article>
+        <article class="card svc"><span class="num">04</span><h3>A/C service</h3><p>A/C service, including tracking down leaks, to keep you cool through Florida summers.</p></article>
+        <article class="card svc"><span class="num">05</span><h3>Alignments</h3><p>Wheel alignments to stop the pull and help your tires last.</p></article>
+        <article class="card svc"><span class="num">06</span><h3>Shocks &amp; struts</h3><p>Shocks and struts for a smoother, more controlled ride.</p></article>
+      </div>
+    </section>
+    <section id="reviews">
+      <p class="kicker">Reviews</p>
+      <h2>What neighbors say</h2>
+      <div class="grid revs">
+        <figure class="card rev"><blockquote>“But Jason and his team were really great folks.”</blockquote><figcaption>— Taylor, Jun 2026</figcaption></figure>
+        <figure class="card rev"><blockquote>“Thanks to Jason and his team, they trouble shot my AC system and found the leak very fast.”</blockquote><figcaption>— Giovanni, Jun 2026</figcaption></figure>
+        <figure class="card rev"><blockquote>“They did a great job and I would recommend them to anyone.”</blockquote><figcaption>— Ronald, Jun 2026</figcaption></figure>
+      </div>
+    </section>
+    <section id="about-visit">
+      <div class="split">
+        <div class="card about">
+          <p class="kicker">Who we are</p>
+          <h2>About</h2>
+          <p>Sonny's Tire &amp; Automotive is a local shop at 5906 Gornto Lake Rd in Riverview. Oil changes, tire balancing, tune-ups, A/C service, alignments, rotation, shocks and struts are all lettered right on our window. Customers point to Jason and his team for fast troubleshooting and good work.</p>
+        </div>
+        <div class="card visit" id="hours">
+          <p class="kicker">Hours &amp; address</p>
+          <h2>Visit</h2>
+          <dl>
+          <div><dt>Address</dt><dd><strong>5906 Gornto Lake Rd, Riverview, FL 33578</strong></dd></div>
+          <div><dt>Hours</dt><dd>Please call ahead for current hours.</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+18136264556">(813) 626-4556</a></dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn btn-red btn-lg" href="tel:+18136264556"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call (813) 626-4556</a>
+            <a class="btn btn-outline btn-lg" href="https://www.google.com/maps/search/?api=1&amp;query=5906%20Gornto%20Lake%20Rd%2C%20Riverview%2C%20FL%2033578" target="_blank" rel="noopener">Get directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>Preview built by <a href="https://aurisaiagency.com">Auris AI Agency</a></span>
+    <span>Photo: Unsplash</span>
+  </footer>
+  <div class="overlay">
+    <div class="overlay-inner">
+      <span>Preview site for Sonny's. Claim it — $99 setup / $49 mo.</span>
+      <div class="overlay-cta">
+        <a class="claim" href="https://buy.stripe.com/8x2aEYc7n6501pi5uz7N60h">Claim this site</a>
+        <a class="yearly" href="https://buy.stripe.com/dRmaEYefv8d82tm9KP7N60i">Pay the year — $411 hosting (30% off)</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
