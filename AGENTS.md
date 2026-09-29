@@ -4,16 +4,41 @@ Static preview sites for independent auto and tire shops. Each page is one self-
 
 Live site: [https://auris-shop-previews.pages.dev](https://auris-shop-previews.pages.dev) (Cloudflare Pages).
 
+Call scripts (shop-specific): `CALL-SCRIPTS.md`.
+
 ## Status
 
-27 shops are live: 6 in Brandon, 8 in Plant City, 3 in Riverview, 1 in Valrico, 1 in Seffner, 1 in Ruskin, 3 in Gibsonton, 4 in Lakeland. **Nobody has been contacted.**
+27 shops are live: 6 in Brandon, 8 in Plant City, 3 in Riverview, 1 in Valrico, 1 in Seffner, 1 in Ruskin, 3 in Gibsonton, 4 in Lakeland.
 
-Monday call order:
-
-1. Weaver's Tire & Automotive (Brandon)
-2. Bennett's Auto Care by Scotty (Brandon)
+Call progress (Hans, 29 Sep 2026):
+- Weaver's Tire — Mark — **not interested**. Do not call again.
 
 Do not email shops. Calls only, and only when Hans asks. Do not mark a shop contacted unless he says the call happened.
+
+## Research rule — do not miss this again
+
+Scout / any research pass **must** check more than the Google Maps website button.
+
+Before writing `None found`, `no website`, or the call hook “you don’t have a website”:
+
+1. Open the Google Maps listing and record what the website button actually does (none / Add website / Facebook / dead domain / directory).
+2. Search Facebook for **exact shop name + city**. Save the URL even if Maps does not use it.
+3. Search Instagram and TikTok for the shop or owner.
+4. Hit any historic domain (Wayback / DNS). Record dead domains as dead, not as “no web presence.”
+5. Grab emails off signs, cards, and Google.
+
+A Facebook, Instagram, or TikTok page is **not** “no online presence.” Put it in `shops.csv` `current_website` or `notes`.
+
+**Never** tell an owner they have no website if they have Facebook. Say: Maps has no site / the old address doesn’t load / we drafted a page.
+
+Known misses caught 29 Sep 2026 (must stay in the sheet):
+- Bennett's Auto Care — facebook.com/BennettsAutoCare (~357 followers). Domain dead. Maps says Add website.
+- Hometown Tire Plant City — facebook.com/p/Hometown-Tire-Auto-Repair-100090711014930/ — email Hometownplantcity@gmail.com — owner Brandon Prince.
+- Mozalez — TikTok @morales_automotive. Domain dead.
+- JPE — card already said Like us on Facebook; page not confirmed.
+- Automotive Edge — Birdeye hours exist (Mon–Fri 8–5, Sat 9–12); Scout had “hours not found.”
+
+Do not say “404” on a call. Say the old address doesn’t load.
 
 ## Pricing
 
@@ -39,6 +64,7 @@ Quotes, reviewer names, and dates on a page must already exist in that page or i
 ```
 index.html          Root is Weaver's Tire & Automotive (same preview as the shop path)
 shops.csv           Shop list: slug, contact, hours, site status, review sources
+CALL-SCRIPTS.md     Live call scripts — one per shop
 shops/brandon/      6 pages
 shops/plant-city/   8 pages
 shops/riverview/    3 pages
@@ -51,74 +77,7 @@ shops/lakeland/     4 pages
 
 Each shop folder is `shops/{city}/{slug}/index.html`. Public URL: `https://auris-shop-previews.pages.dev/shops/{city}/{slug}/`.
 
-### Brandon
-
-| Slug | Shop | Phone |
-| --- | --- | --- |
-| `weavers-tire-automotive` | Weaver's Tire & Automotive | (813) 685-2906 |
-| `bennetts` | Bennett's Auto Care by Scotty | (813) 571-1520 |
-| `automotive-edge` | Automotive Edge | (813) 506-2812 |
-| `haynes-engine-works` | Haynes Engine Works | (813) 502-5920 |
-| `rb-auto-connection` | RB Auto Connection | (813) 381-4044 |
-| `acevedo-euro-import` | Acevedo Euro Import | (813) 787-5905 |
-
-### Plant City
-
-| Slug | Shop | Phone |
-| --- | --- | --- |
-| `el-toro-tire` | El Toro Tire & Service | (813) 441-4648 |
-| `jpe-auto` | JPE Auto Repairs Inc. & Tire Service | (813) 652-8282 |
-| `mozalez` | Mozalez Auto Repair | (813) 520-0635 |
-| `tire-shop-of-plant-city` | The Tire Shop of Plant City | (813) 752-2532 |
-| `aviles-tires` | Aviles Tires | (813) 946-2792 |
-| `automax` | Automax Services | (813) 441-4477 |
-| `92-tires` | 92 Tires | (813) 752-4600 |
-| `hometown-tire` | Hometown Tire & Auto Repair | (813) 652-8093 |
-
-### Riverview
-
-| Slug | Shop | Phone |
-| --- | --- | --- |
-| `boyds` | Boyd's Auto Center | (813) 677-1865 |
-| `sonnys-tire` | Sonny's Tire & Automotive | (813) 626-4556 |
-| `caribbean-auto` | Caribbean Auto Service & Tire Shop | (813) 647-6409 |
-
-### Valrico
-
-| Slug | Shop | Phone |
-| --- | --- | --- |
-| `dk-european` | DK European Services & Repairs | (813) 802-1695 |
-
-### Seffner
-
-| Slug | Shop | Phone |
-| --- | --- | --- |
-| `brandon-auto-tech` | Brandon Auto Tech (named Brandon, located in Seffner) | (813) 689-5950 |
-
-### Ruskin
-
-| Slug | Shop | Phone |
-| --- | --- | --- |
-| `millenium-tire` | Millenium Tire Service | (813) 641-8446 |
-
-### Gibsonton
-
-| Slug | Shop | Phone |
-| --- | --- | --- |
-| `new-vision-auto-cares` | New Vision Auto Cares | (917) 807-2785 |
-| `cruzcitos-tire-shop` | Cruzcitos Tire Shop | (813) 454-9413 |
-| `south-bay-tire` | South Bay Tire | (813) 236-4131 |
-
-### Lakeland
-
-| Slug | Shop | Phone |
-| --- | --- | --- |
-| `second-chance-tires` | Second Chance Tires & Wheels | (863) 698-7945 |
-| `webbs-service-center` | Webb's Service Center | (863) 686-5498 |
-| `wesco-tire` | Wesco Tire Service | (863) 682-4319 |
-| `grants-auto` | Grant's Auto | (863) 666-1282 |
-
-Addresses, hours, and source notes live in `shops.csv`. Prefer that file over memory when they disagree with a page.
+Addresses, hours, and source notes live in `shops.csv`. Prefer that file over memory when they disagree with a page. Prefer `CALL-SCRIPTS.md` for what Hans says on the phone.
 
 ## Editing rules
 
