@@ -153,6 +153,14 @@ section.block{padding-block:clamp(56px,9vw,104px)}
 .note{font-size:.88rem;color:var(--foam-dim);margin-top:14px}
 @media (max-width:760px){.calc{grid-template-columns:1fr}.calc .card{transform:none}}
 
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.review{background:var(--porter);border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:12px;align-content:start;min-width:0}
+.review h3{font-size:1.2rem;color:var(--amber)}
+.review blockquote{margin:0;color:var(--foam);font-size:1rem}
+.review cite{font-style:normal;font-family:var(--f-mono);font-size:.78rem;color:var(--foam-dim)}
+.review cite b{color:var(--foam);font-weight:600}
+.src{margin-top:18px;font-size:.88rem;color:var(--foam-dim)}
+.src a{color:var(--amber)}
 /* visit */
 .visit{background:var(--porter);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .visit .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,64px);align-items:center}
@@ -329,6 +337,22 @@ footer a{color:var(--foam)}
         <div class="result" id="abv-out" aria-live="polite"><span class="big" id="abv-num">5.0%</span><small>ABV</small></div>
         <div class="extra" id="abv-extra"></div>
       </form>
+    </div>
+  </section>
+
+  <section class="block" id="reviews" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">From the locals</p>
+        <h2>What Bundy brewers say</h2>
+      </div>
+      <div class="reviews">
+        <article class="review"><h3>First time Beer Home Brewer</h3><blockquote>&ldquo;I honestly cannot recommend this place enough, the guy was super helpful, not condescending at all.&rdquo;</blockquote><cite><b>Andrew</b> · January 2026</cite></article>
+        <article class="review"><h3>Amazing shop with heaps of knowledge</h3><blockquote>&ldquo;Doesn't matter if you are someone trying to get into home brewing or you have been doing it for years&rdquo;</blockquote><cite><b>Kyle</b> · October 2025</cite></article>
+        <article class="review"><h3>Good people, good prices.</h3><blockquote>&ldquo;What more do you want?&rdquo;</blockquote><cite><b>rick</b> · August 2025</cite></article>
+        <article class="review"><h3>More than helpful with distilling</h3><blockquote>&ldquo;Awesome thanks 😊&rdquo;</blockquote><cite><b>Trisha</b> · April 2025</cite></article>
+      </div>
+      <p class="src">Reviews from <a href="https://homebrewing.com.au/store/hooch-home-brew-bundaberg/" target="_blank" rel="noopener">homebrewing.com.au</a></p>
     </div>
   </section>
 
