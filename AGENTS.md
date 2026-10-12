@@ -73,6 +73,7 @@ shops/seffner/      1 page
 shops/ruskin/       1 page
 shops/gibsonton/    3 pages
 shops/lakeland/     4 pages
+shops/bundaberg/    1 page (Hooch Home Brew, Australia; claim bar has no checkout yet, AUD Stripe links pending)
 ```
 
 Each shop folder is `shops/{city}/{slug}/index.html`. Public URL: `https://auris-shop-previews.pages.dev/shops/{city}/{slug}/`.
