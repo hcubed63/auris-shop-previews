@@ -62,6 +62,9 @@
     .overlay a:hover, .overlay a:focus-visible { background:var(--red-dark); }
     .overlay-cta { display:flex; flex-direction:column; align-items:flex-end; gap:.35rem; flex-shrink:0; }
     .overlay a.yearly { background:none; padding:0; border-radius:0; font-weight:500; font-size:.78rem; color:#cfcfcb; text-decoration:underline; text-underline-offset:2px; }
+    .overlay .yearly-after { font-size:.72rem; color:#a9a9a4; }
+    .rev .stars { color:#ffc94d; letter-spacing:1px; }
+    .rev figcaption a { color:inherit; text-decoration:underline; text-underline-offset:2px; }
     .overlay a.yearly:hover, .overlay a.yearly:focus-visible { background:none; color:#fff; }
     a:focus-visible { outline:3px solid #ffd166; outline-offset:2px; }
     @media (max-width:480px) {
@@ -76,6 +79,7 @@
       .overlay-cta { align-items:stretch; gap:.4rem; width:100%; }
       .overlay a.claim { display:block; width:100%; text-align:center; white-space:normal; box-sizing:border-box; }
       .overlay a.yearly { display:block; text-align:center; white-space:normal; font-size:.76rem; line-height:1.35; }
+      .overlay .yearly-after { display:block; text-align:center; }
     }
     @media (min-width:700px) {
       .top-inner { padding:.8rem 1.25rem; }
@@ -126,9 +130,9 @@
       <p class="kicker">Reviews</p>
       <h2>What neighbors say</h2>
       <div class="grid revs">
-        <figure class="card rev"><blockquote>“On a road trip from Texas with granddaughter playing a championship basketball game. Developed a terrible vibration in the vehicle, with very limited time to address the problem. We called, they got us in quickly and immediately found the problem, we were on our way in record time. ...”</blockquote><figcaption>— Penny Cranford, Jul 2026 (Google)</figcaption></figure>
-        <figure class="card rev"><blockquote>“Fast and a great price. The technician who took care of me was polite and professional.”</blockquote><figcaption>— Jesus Sánchez Meza, Jun 2026 (Google)</figcaption></figure>
-        <figure class="card rev"><blockquote>“Absolutely excellent service from Southland Tire. I recently replaced my tires there and the whole experience was outstanding from start to finish. The staff was very friendly and welcoming, and you can genuinely feel the positive atmosphere as soon as you walk in. ...”</blockquote><figcaption>— Alfredo Galviz, May 2026 (Google)</figcaption></figure>
+        <figure class="card rev"><blockquote>“On a road trip from Texas with granddaughter playing a championship basketball game. Developed a terrible vibration in the vehicle, with very limited time to address the problem. We called, they got us in quickly and immediately found the problem, we were on our way in record time. ...”</blockquote><figcaption><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> — Penny Cranford, Jul 2026 · <a href="https://www.google.com/maps/place/Southland+Tire/@28.0593201,-81.7796173,17z/data=!3m1!4b1!4m6!3m5!1s0x88dd6b560eccac93:0x27fb8a2fbf527e23!8m2!3d28.0593201!4d-81.7796173!16s%2Fg%2F1tg6whs6" target="_blank" rel="noopener">Google</a></figcaption></figure>
+        <figure class="card rev"><blockquote>“Fast and a great price. The technician who took care of me was polite and professional.”</blockquote><figcaption><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> — Jesus Sánchez Meza, Jun 2026 · <a href="https://www.google.com/maps/place/Southland+Tire/@28.0593201,-81.7796173,17z/data=!3m1!4b1!4m6!3m5!1s0x88dd6b560eccac93:0x27fb8a2fbf527e23!8m2!3d28.0593201!4d-81.7796173!16s%2Fg%2F1tg6whs6" target="_blank" rel="noopener">Google</a></figcaption></figure>
+        <figure class="card rev"><blockquote>“Absolutely excellent service from Southland Tire. I recently replaced my tires there and the whole experience was outstanding from start to finish. The staff was very friendly and welcoming, and you can genuinely feel the positive atmosphere as soon as you walk in. ...”</blockquote><figcaption><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> — Alfredo Galviz, May 2026 · <a href="https://www.google.com/maps/place/Southland+Tire/@28.0593201,-81.7796173,17z/data=!3m1!4b1!4m6!3m5!1s0x88dd6b560eccac93:0x27fb8a2fbf527e23!8m2!3d28.0593201!4d-81.7796173!16s%2Fg%2F1tg6whs6" target="_blank" rel="noopener">Google</a></figcaption></figure>
       </div>
     </section>
     <section id="about-visit">
@@ -160,10 +164,11 @@
   </footer>
   <div class="overlay">
     <div class="overlay-inner">
-      <span>Preview site for Southland Tire. Claim it — $99 setup / $49 mo.</span>
+      <span>Preview site for Southland Tire. Claim it: $99 setup + $49/month, $148 today</span>
       <div class="overlay-cta">
         <a class="claim" href="https://buy.stripe.com/8x2aEYc7n6501pi5uz7N60h">Claim this site</a>
         <a class="yearly" href="/yearly?shop=southland-tire">$99 setup + $353 for your first year (40% off), $452 today</a>
+        <span class="yearly-after">then $588/year after, save $235</span>
       </div>
     </div>
   </div>

@@ -62,6 +62,9 @@
     .overlay a:hover, .overlay a:focus-visible { background:var(--red-dark); }
     .overlay-cta { display:flex; flex-direction:column; align-items:flex-end; gap:.35rem; flex-shrink:0; }
     .overlay a.yearly { background:none; padding:0; border-radius:0; font-weight:500; font-size:.78rem; color:#cfcfcb; text-decoration:underline; text-underline-offset:2px; }
+    .overlay .yearly-after { font-size:.72rem; color:#a9a9a4; }
+    .rev .stars { color:#ffc94d; letter-spacing:1px; }
+    .rev figcaption a { color:inherit; text-decoration:underline; text-underline-offset:2px; }
     .overlay a.yearly:hover, .overlay a.yearly:focus-visible { background:none; color:#fff; }
     a:focus-visible { outline:3px solid #ffd166; outline-offset:2px; }
     @media (max-width:480px) {
@@ -76,6 +79,7 @@
       .overlay-cta { align-items:stretch; gap:.4rem; width:100%; }
       .overlay a.claim { display:block; width:100%; text-align:center; white-space:normal; box-sizing:border-box; }
       .overlay a.yearly { display:block; text-align:center; white-space:normal; font-size:.76rem; line-height:1.35; }
+      .overlay .yearly-after { display:block; text-align:center; }
     }
     @media (min-width:700px) {
       .top-inner { padding:.8rem 1.25rem; }
@@ -126,9 +130,9 @@
       <p class="kicker">Reviews</p>
       <h2>What neighbors say</h2>
       <div class="grid revs">
-        <figure class="card rev"><blockquote>“Best place for quick service. 3rd time coming here, I'd recommend if you're in the city.”</blockquote><figcaption>— Thomas Otero, Oct 2026 (Google)</figcaption></figure>
-        <figure class="card rev"><blockquote>“Great experience! We were there no less than 30 minutes. Got 4 tires put on immediately when we arrived! ...”</blockquote><figcaption>— ashley Witherspoon, Jun 2026 (Google)</figcaption></figure>
-        <figure class="card rev"><blockquote>“These guys are open 7 days a week. They took good care of me not too bad of a price either for nowadays the owner was very very nice and they were very quick and taking care of us. I know we have a busy life and sometimes the people close before we even get out of work but these guys are open seven days a week you were able to get your tire fixed and be safe on the road.”</blockquote><figcaption>— Adventure With the Riveras, 2023 (Google)</figcaption></figure>
+        <figure class="card rev"><blockquote>“Best place for quick service. 3rd time coming here, I'd recommend if you're in the city.”</blockquote><figcaption><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> — Thomas Otero, Oct 2026 · <a href="https://www.google.com/maps/place/Amigos+Used+Tires+Wheels+Inc/@28.4723803,-81.3726779,17z/data=!3m1!4b1!4m6!3m5!1s0x88e77c927c0eac29:0x89d618513d2adb79!8m2!3d28.4723803!4d-81.3726779!16s%2Fg%2F1tdx4z4h" target="_blank" rel="noopener">Google</a></figcaption></figure>
+        <figure class="card rev"><blockquote>“Great experience! We were there no less than 30 minutes. Got 4 tires put on immediately when we arrived! ...”</blockquote><figcaption><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> — ashley Witherspoon, Jun 2026 · <a href="https://www.google.com/maps/place/Amigos+Used+Tires+Wheels+Inc/@28.4723803,-81.3726779,17z/data=!3m1!4b1!4m6!3m5!1s0x88e77c927c0eac29:0x89d618513d2adb79!8m2!3d28.4723803!4d-81.3726779!16s%2Fg%2F1tdx4z4h" target="_blank" rel="noopener">Google</a></figcaption></figure>
+        <figure class="card rev"><blockquote>“These guys are open 7 days a week. They took good care of me not too bad of a price either for nowadays the owner was very very nice and they were very quick and taking care of us. I know we have a busy life and sometimes the people close before we even get out of work but these guys are open seven days a week you were able to get your tire fixed and be safe on the road.”</blockquote><figcaption><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> — Adventure With the Riveras, 2023 · <a href="https://www.google.com/maps/place/Amigos+Used+Tires+Wheels+Inc/@28.4723803,-81.3726779,17z/data=!3m1!4b1!4m6!3m5!1s0x88e77c927c0eac29:0x89d618513d2adb79!8m2!3d28.4723803!4d-81.3726779!16s%2Fg%2F1tdx4z4h" target="_blank" rel="noopener">Google</a></figcaption></figure>
       </div>
     </section>
     <section id="about-visit">
@@ -160,10 +164,11 @@
   </footer>
   <div class="overlay">
     <div class="overlay-inner">
-      <span>Preview site for Amigos Used Tires. Claim it — $99 setup / $49 mo.</span>
+      <span>Preview site for Amigos Used Tires. Claim it: $99 setup + $49/month, $148 today</span>
       <div class="overlay-cta">
         <a class="claim" href="https://buy.stripe.com/8x2aEYc7n6501pi5uz7N60h">Claim this site</a>
         <a class="yearly" href="/yearly?shop=amigos-used-tires-wheels">$99 setup + $353 for your first year (40% off), $452 today</a>
+        <span class="yearly-after">then $588/year after, save $235</span>
       </div>
     </div>
   </div>

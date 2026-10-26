@@ -62,6 +62,9 @@
     .overlay a:hover, .overlay a:focus-visible { background:var(--red-dark); }
     .overlay-cta { display:flex; flex-direction:column; align-items:flex-end; gap:.35rem; flex-shrink:0; }
     .overlay a.yearly { background:none; padding:0; border-radius:0; font-weight:500; font-size:.78rem; color:#cfcfcb; text-decoration:underline; text-underline-offset:2px; }
+    .overlay .yearly-after { font-size:.72rem; color:#a9a9a4; }
+    .rev .stars { color:#ffc94d; letter-spacing:1px; }
+    .rev figcaption a { color:inherit; text-decoration:underline; text-underline-offset:2px; }
     .overlay a.yearly:hover, .overlay a.yearly:focus-visible { background:none; color:#fff; }
     a:focus-visible { outline:3px solid #ffd166; outline-offset:2px; }
     @media (max-width:480px) {
@@ -76,6 +79,7 @@
       .overlay-cta { align-items:stretch; gap:.4rem; width:100%; }
       .overlay a.claim { display:block; width:100%; text-align:center; white-space:normal; box-sizing:border-box; }
       .overlay a.yearly { display:block; text-align:center; white-space:normal; font-size:.76rem; line-height:1.35; }
+      .overlay .yearly-after { display:block; text-align:center; }
     }
     @media (min-width:700px) {
       .top-inner { padding:.8rem 1.25rem; }
@@ -126,9 +130,9 @@
       <p class="kicker">Reviews</p>
       <h2>What neighbors say</h2>
       <div class="grid revs">
-        <figure class="card rev"><blockquote>“Joshua is an amazing person and a true professional at what he does! He’s very honest and skilled. He helped my family and me repair a tire so we could make it back to Miami. ...”</blockquote><figcaption>— Daniel Yesid Uribe, Oct 2026 (Google)</figcaption></figure>
-        <figure class="card rev"><blockquote>“Tires R Us is an amazing tire shop! Their 24/7 availability and affordable pricing honestly saved my beach trip. I’m extremely grateful for the exceptional service Joshua and his team provided. ...”</blockquote><figcaption>— Christian Reyes, Jul 2026 (Google)</figcaption></figure>
-        <figure class="card rev"><blockquote>“Great customer service and reliable , the owner Josh took care of me and the communication was on point , he helped me accomplish the projects that I have for my golf carts”</blockquote><figcaption>— rafael Rivas, May 2026 (Google)</figcaption></figure>
+        <figure class="card rev"><blockquote>“Joshua is an amazing person and a true professional at what he does! He’s very honest and skilled. He helped my family and me repair a tire so we could make it back to Miami. ...”</blockquote><figcaption><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> — Daniel Yesid Uribe, Oct 2026 · <a href="https://www.google.com/maps/place/Tires+R+Us/@28.0211977,-81.7785332,17z/data=!3m1!4b1!4m6!3m5!1s0x88dd13b2a125ffd9:0x21954e73bd6f3203!8m2!3d28.0211977!4d-81.7785332!16s%2Fg%2F11vl_hvlgj" target="_blank" rel="noopener">Google</a></figcaption></figure>
+        <figure class="card rev"><blockquote>“Tires R Us is an amazing tire shop! Their 24/7 availability and affordable pricing honestly saved my beach trip. I’m extremely grateful for the exceptional service Joshua and his team provided. ...”</blockquote><figcaption><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> — Christian Reyes, Jul 2026 · <a href="https://www.google.com/maps/place/Tires+R+Us/@28.0211977,-81.7785332,17z/data=!3m1!4b1!4m6!3m5!1s0x88dd13b2a125ffd9:0x21954e73bd6f3203!8m2!3d28.0211977!4d-81.7785332!16s%2Fg%2F11vl_hvlgj" target="_blank" rel="noopener">Google</a></figcaption></figure>
+        <figure class="card rev"><blockquote>“Great customer service and reliable , the owner Josh took care of me and the communication was on point , he helped me accomplish the projects that I have for my golf carts”</blockquote><figcaption><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> — rafael Rivas, May 2026 · <a href="https://www.google.com/maps/place/Tires+R+Us/@28.0211977,-81.7785332,17z/data=!3m1!4b1!4m6!3m5!1s0x88dd13b2a125ffd9:0x21954e73bd6f3203!8m2!3d28.0211977!4d-81.7785332!16s%2Fg%2F11vl_hvlgj" target="_blank" rel="noopener">Google</a></figcaption></figure>
       </div>
     </section>
     <section id="about-visit">
@@ -160,10 +164,11 @@
   </footer>
   <div class="overlay">
     <div class="overlay-inner">
-      <span>Preview site for Tires R Us. Claim it — $99 setup / $49 mo.</span>
+      <span>Preview site for Tires R Us. Claim it: $99 setup + $49/month, $148 today</span>
       <div class="overlay-cta">
         <a class="claim" href="https://buy.stripe.com/8x2aEYc7n6501pi5uz7N60h">Claim this site</a>
         <a class="yearly" href="/yearly?shop=tires-r-us">$99 setup + $353 for your first year (40% off), $452 today</a>
+        <span class="yearly-after">then $588/year after, save $235</span>
       </div>
     </div>
   </div>

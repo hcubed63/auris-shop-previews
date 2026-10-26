@@ -62,6 +62,9 @@
     .overlay a:hover, .overlay a:focus-visible { background:var(--red-dark); }
     .overlay-cta { display:flex; flex-direction:column; align-items:flex-end; gap:.35rem; flex-shrink:0; }
     .overlay a.yearly { background:none; padding:0; border-radius:0; font-weight:500; font-size:.78rem; color:#cfcfcb; text-decoration:underline; text-underline-offset:2px; }
+    .overlay .yearly-after { font-size:.72rem; color:#a9a9a4; }
+    .rev .stars { color:#ffc94d; letter-spacing:1px; }
+    .rev figcaption a { color:inherit; text-decoration:underline; text-underline-offset:2px; }
     .overlay a.yearly:hover, .overlay a.yearly:focus-visible { background:none; color:#fff; }
     a:focus-visible { outline:3px solid #ffd166; outline-offset:2px; }
     @media (max-width:480px) {
@@ -76,6 +79,7 @@
       .overlay-cta { align-items:stretch; gap:.4rem; width:100%; }
       .overlay a.claim { display:block; width:100%; text-align:center; white-space:normal; box-sizing:border-box; }
       .overlay a.yearly { display:block; text-align:center; white-space:normal; font-size:.76rem; line-height:1.35; }
+      .overlay .yearly-after { display:block; text-align:center; }
     }
     @media (min-width:700px) {
       .top-inner { padding:.8rem 1.25rem; }
@@ -162,10 +166,11 @@
   </footer>
   <div class="overlay">
     <div class="overlay-inner">
-      <span>Preview site for Sonny's. Claim it — $99 setup / $49 mo.</span>
+      <span>Preview site for Sonny's. Claim it: $99 setup + $49/month, $148 today</span>
       <div class="overlay-cta">
         <a class="claim" href="https://buy.stripe.com/8x2aEYc7n6501pi5uz7N60h">Claim this site</a>
         <a class="yearly" href="/yearly?shop=sonnys-tire">$99 setup + $353 for your first year (40% off), $452 today</a>
+        <span class="yearly-after">then $588/year after, save $235</span>
       </div>
     </div>
   </div>

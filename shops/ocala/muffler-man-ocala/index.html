@@ -62,6 +62,9 @@
     .overlay a:hover, .overlay a:focus-visible { background:var(--red-dark); }
     .overlay-cta { display:flex; flex-direction:column; align-items:flex-end; gap:.35rem; flex-shrink:0; }
     .overlay a.yearly { background:none; padding:0; border-radius:0; font-weight:500; font-size:.78rem; color:#cfcfcb; text-decoration:underline; text-underline-offset:2px; }
+    .overlay .yearly-after { font-size:.72rem; color:#a9a9a4; }
+    .rev .stars { color:#ffc94d; letter-spacing:1px; }
+    .rev figcaption a { color:inherit; text-decoration:underline; text-underline-offset:2px; }
     .overlay a.yearly:hover, .overlay a.yearly:focus-visible { background:none; color:#fff; }
     a:focus-visible { outline:3px solid #ffd166; outline-offset:2px; }
     @media (max-width:480px) {
@@ -76,6 +79,7 @@
       .overlay-cta { align-items:stretch; gap:.4rem; width:100%; }
       .overlay a.claim { display:block; width:100%; text-align:center; white-space:normal; box-sizing:border-box; }
       .overlay a.yearly { display:block; text-align:center; white-space:normal; font-size:.76rem; line-height:1.35; }
+      .overlay .yearly-after { display:block; text-align:center; }
     }
     @media (min-width:700px) {
       .top-inner { padding:.8rem 1.25rem; }
@@ -127,9 +131,9 @@
       <p class="kicker">Reviews</p>
       <h2>What neighbors say</h2>
       <div class="grid revs">
-        <figure class="card rev"><blockquote>“Mandy and joel are the bomb! They helped me today with my muffler needs I wanted exactly what I wanted and they even told me how to get better sound out my vehicle I drive a Nissan 370z and wanted to get a really nice sound and I couldn't be any happier with the results! Please ask for Joel he will take care of you.”</blockquote><figcaption>— Brenton, Jul 2026 (Google)</figcaption></figure>
-        <figure class="card rev"><blockquote>“Mandy and Joel (i think that was his name) and staff were awesome, quick, and waited for me to get there before leaving. Went above what I went in for and repaired my tires. They are great recommend for sure.”</blockquote><figcaption>— Christina Barreiro, May 2026 (Google)</figcaption></figure>
-        <figure class="card rev"><blockquote>“Came here about a week ago and had them replace my stock headers with some long tube headers on my Dodge Challenger and I can say they did a good job. I had Joel doing my headers and was very knowledgeable and was able to nicely tuck them away. Price wise they charged about 300 less then the other places I had called so that was another plus. ...”</blockquote><figcaption>— sam Eckelmann, 2024 (Google)</figcaption></figure>
+        <figure class="card rev"><blockquote>“Mandy and joel are the bomb! They helped me today with my muffler needs I wanted exactly what I wanted and they even told me how to get better sound out my vehicle I drive a Nissan 370z and wanted to get a really nice sound and I couldn't be any happier with the results! Please ask for Joel he will take care of you.”</blockquote><figcaption><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> — Brenton, Jul 2026 · <a href="https://www.google.com/maps/place/Muffler+Man+Ocala/@29.1692606,-82.1384472,17z/data=!3m1!4b1!4m6!3m5!1s0x88e7d4ba99ae8ab5:0x18641cfbda1d48c!8m2!3d29.1692606!4d-82.1384472!16s%2Fg%2F1vyk3b2_" target="_blank" rel="noopener">Google</a></figcaption></figure>
+        <figure class="card rev"><blockquote>“Mandy and Joel (i think that was his name) and staff were awesome, quick, and waited for me to get there before leaving. Went above what I went in for and repaired my tires. They are great recommend for sure.”</blockquote><figcaption><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> — Christina Barreiro, May 2026 · <a href="https://www.google.com/maps/place/Muffler+Man+Ocala/@29.1692606,-82.1384472,17z/data=!3m1!4b1!4m6!3m5!1s0x88e7d4ba99ae8ab5:0x18641cfbda1d48c!8m2!3d29.1692606!4d-82.1384472!16s%2Fg%2F1vyk3b2_" target="_blank" rel="noopener">Google</a></figcaption></figure>
+        <figure class="card rev"><blockquote>“Came here about a week ago and had them replace my stock headers with some long tube headers on my Dodge Challenger and I can say they did a good job. I had Joel doing my headers and was very knowledgeable and was able to nicely tuck them away. Price wise they charged about 300 less then the other places I had called so that was another plus. ...”</blockquote><figcaption><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> — sam Eckelmann, 2024 · <a href="https://www.google.com/maps/place/Muffler+Man+Ocala/@29.1692606,-82.1384472,17z/data=!3m1!4b1!4m6!3m5!1s0x88e7d4ba99ae8ab5:0x18641cfbda1d48c!8m2!3d29.1692606!4d-82.1384472!16s%2Fg%2F1vyk3b2_" target="_blank" rel="noopener">Google</a></figcaption></figure>
       </div>
     </section>
     <section id="about-visit">
@@ -161,10 +165,11 @@
   </footer>
   <div class="overlay">
     <div class="overlay-inner">
-      <span>Preview site for Muffler Man. Claim it — $99 setup / $49 mo.</span>
+      <span>Preview site for Muffler Man. Claim it: $99 setup + $49/month, $148 today</span>
       <div class="overlay-cta">
         <a class="claim" href="https://buy.stripe.com/8x2aEYc7n6501pi5uz7N60h">Claim this site</a>
         <a class="yearly" href="/yearly?shop=muffler-man-ocala">$99 setup + $353 for your first year (40% off), $452 today</a>
+        <span class="yearly-after">then $588/year after, save $235</span>
       </div>
     </div>
   </div>
