@@ -2,7 +2,7 @@
 // with a 40%-off first-year coupon that applies only to the yearly hosting product. First charge $452.
 const YEARLY_PRICE = 'price_1UUi5jKrK4e65vuZpX9xt5yF'; // $588/yr, prod_VVjYeT43WguuNl
 const SETUP_PRICE = 'price_1UUi5jKrK4e65vuZxksUzdBe';  // $99 one-time, prod_VVjYNNf6nZJD91
-const COUPON = 'R62AnHHk';                              // 40% off, once, applies_to yearly product
+const COUPON = 'C5vY9zEz';                              // $235 off once, applies_to yearly product (was R62AnHHk 40%)
 
 export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
