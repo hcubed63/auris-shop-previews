@@ -70,6 +70,13 @@
       .actions .btn-lg { flex:1 1 100%; }
       .overlay-inner { font-size:.84rem; }
     }
+    @media (max-width:600px) {
+      .overlay-inner { flex-direction:column; align-items:stretch; text-align:center; gap:.5rem; padding:.6rem .85rem calc(.6rem + env(safe-area-inset-bottom)); }
+      .overlay-inner > span { display:block; width:100%; line-height:1.3; }
+      .overlay-cta { align-items:stretch; gap:.4rem; width:100%; }
+      .overlay a.claim { display:block; width:100%; text-align:center; white-space:normal; box-sizing:border-box; }
+      .overlay a.yearly { display:block; text-align:center; white-space:normal; font-size:.76rem; line-height:1.35; }
+    }
     @media (min-width:700px) {
       .top-inner { padding:.8rem 1.25rem; }
       .brand { font-size:1.25rem; }
@@ -156,7 +163,7 @@
       <span>Preview site for El Toro. Claim it — $99 setup / $49 mo.</span>
       <div class="overlay-cta">
         <a class="claim" href="https://buy.stripe.com/8x2aEYc7n6501pi5uz7N60h">Claim this site</a>
-        <a class="yearly" href="https://buy.stripe.com/dRmaEYefv8d82tm9KP7N60i">Pay the year — $411 hosting (30% off)</a>
+        <a class="yearly" href="/yearly?shop=el-toro-tire">$99 setup + $353 for your first year (40% off), $452 today</a>
       </div>
     </div>
   </div>
